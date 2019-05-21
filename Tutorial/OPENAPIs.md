@@ -5,7 +5,7 @@
 4. [OpenAQ](https://openaq.org/#/?_k=ogddyg)
 5. AirVisual Project and their Air Quality [API](https://www.airvisual.com/)
 6. Bitspi AirPollution [API](https://airpollutionapi.com/) (Just provides information in India)
-<span style="color:blue">some *This is Blue italic.* text</span>
+<span style="color:red">text in red</span>
 ### 1- World Air Quality Index [Project](http://aqicn.org/contact/)
 Brief review of JSON [API](https://aqicn.org/json-api/doc/):
 * *Access to more than 9000 stations worldwide ~ that’s around 600 major cities in 70 [countries](http://aqicn.org/sources/)* 

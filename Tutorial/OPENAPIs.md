@@ -20,9 +20,14 @@ Brief review of JSON [API](https://aqicn.org/json-api/doc/):
 ### Limitations: 
 1. It does not support historical data
 2. Maximum of 10 requests per second per user (all the users with the same token consider as a user) 
-### Strengths
--API documentation Rating="****"
+### Summary
+-Very good world airqulaity coverage
+-API documentation Rating= 3/5 
 -Online and interactive query maker
+-There aren't any open source projects and GitHub code repositories
+-Require token as the authentication method
+-There aren't any communities
+-Does not support historical data and forecast information
 ##### Sample JSON data:
 ```HTTP Request:
 url: https://api.waqi.info/feed/Calgary/?token=12344444...

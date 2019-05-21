@@ -6,9 +6,10 @@
 5. AirVisual Project and their Air Quality [API](https://www.airvisual.com/)
 6. Bitspi AirPollution [API](https://airpollutionapi.com/) (Just provides information in India)
 
-### 1- World Air Quality Index Project
+### 1- World Air Quality Index [Project](http://aqicn.org/contact/)
 Brief review of JSON [API](https://aqicn.org/json-api/doc/):
-* *Access to more than 9000 station level and 600 city level data*
+* *Access to more than 9000 stations worldwide ~ that’s around 600 major cities in 70 [countries](http://aqicn.org/sources/)* 
+* *Fully cover Canada and the US*
 * *Geo-location query (based on latitude/longitude or IP address)*
 * *Individual AQI for all pollutants (PM2.5, PM10, NO2, CO, SO2, Ozone)*
 * *Station name and coordinates*
@@ -16,6 +17,9 @@ Brief review of JSON [API](https://aqicn.org/json-api/doc/):
 * *Current weather conditions*
 * *Stations within a map lat/lng bounds*
 * *Search stations by name* </br>
+### Limitations: 
+1. It does not support historical data
+2. Maximum of 10 requests per second per user (all the users with the same token consider as a user) 
 ##### Sample JSON data:
 ```HTTP Request:
 url: https://api.waqi.info/feed/Calgary/?token=12344444...

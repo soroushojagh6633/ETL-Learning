@@ -28,7 +28,7 @@ Brief review of JSON [API](https://aqicn.org/json-api/doc/):
 * Requires token as the authentication method
 * There aren't any communities
 * Does not support historical data and forecast information
-##### Sample JSON data:
+##### Sample JSON data (for the city of **Calgary**):
 ```HTTP Request:
 url: https://api.waqi.info/feed/Calgary/?token=12344444...
 JSON Response:

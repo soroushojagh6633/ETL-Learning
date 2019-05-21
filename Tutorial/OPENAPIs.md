@@ -139,7 +139,7 @@ PM2.5, PM10, CO, SO2, NO2, O3, and BC. You can read more [here](https://github.c
 ##### Limitation:
 There are IP-based limits imposed of ~2000 requests over a 5 minute period. If you are running into a number of failed requests, please check the rate of requests.</br>
 ##### Open AQ Platform [API](https://docs.openaq.org/)
-Sample http request and response: 
+[Sample](https://dolugen.github.io/openaq-browser/#/) http request and response: 
 ```HTTP Request
 url = https://api.openaq.org/v1/measurements?country=CA&city=ALBERTA&location=Calgary+Central2&parameter=pm25&date_from=2019-05-20&date_to=2019-05-20
 ```

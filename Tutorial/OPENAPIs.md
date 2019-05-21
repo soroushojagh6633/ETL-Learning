@@ -20,13 +20,13 @@ Brief review of JSON [API](https://aqicn.org/json-api/doc/):
 ### Limitations: 
 1. It does not support historical data
 2. Maximum of 10 requests per second per user (all the users with the same token consider as a user) 
-### Summary
-* Very good world airqulaity coverage
+### Summary:
+* World airqulaity coverage
 * API documentation Rating= 3/5 
 * Online and interactive query maker
 * There aren't any open source projects and GitHub code repositories
 * Requires token as the authentication method
-* There aren't any communities
+* There aren't any online communities
 * Does not support historical data and forecast information
 ##### Sample JSON data **(for the city of __Calgary__)**:
 ```HTTP Request:
@@ -102,6 +102,19 @@ JSON Response:
 ### 2- AirNow [API](https://docs.airnowapi.org/)
 #### A brief review of AirNow:
 The U.S. EPA [AirNow program](www.AirNow.gov) protects public health by providing forecast and real-time observed air quality information across the United States, Canada, and Mexico. AirNow receives real-time air quality observations from over 2,000 monitoring stations and collects forecasts for more than 300 cities. 
+### Limitations:
+* Mostly support the US 
+* Sensor observation web service will respond to up to 500 requests within a one-hour period
+* Requires API key as the authentication method
+* Air quality observations are updated once per hour and forecasts are issued once per day
+* Users must limit web service calls for a given API key to the maximum permitted for the web service (500 requests per hour for sensors' observations) find more [here](https://docs.airnowapi.org/CurrentObservationsByLatLon/docs) 
+### Summary:
+* It does not cover Canada
+* Querying Web Service does not return any results for Canadian cities including Calgary, Edmonton, and Vancouver, but it works fine for the US cities
+* Interactive querying [web service](https://docs.airnowapi.org/CurrentObservationsByLatLon/query)
+* API documentation Rating = 3/5
+* There are many GitHub repositories for AirNow like [this](https://github.com/ToddGreenfield/homebridge-airnow), [this with __React.js__](https://github.com/daweifeng/AirNow), and [this](https://github.com/joelhawksley/air-now-service)
+* Online communities Rating= 4/5
 ##### Sample url and JSON response (Lon Angeles)
 ```HTTP Request
 url = http://www.airnowapi.org/aq/observation/latLong/current/?format=application/json&latitude=34.0410&longitude=-118.3444&distance=25&API_KEY=1111

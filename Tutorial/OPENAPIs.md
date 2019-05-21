@@ -1,8 +1,7 @@
-## Tutorial README file
-### Different Open APIs for Air Pollution: 
+## Different Open APIs for Air Pollution: 
 1. World Air Quality Index [Project](https://aqicn.org/api/) 
 2. [Ambee](http://docs.ambeedata.com/)
-3. [Openaq](https://openaq.org/#/?_k=ogddyg)
+3. [OpenAQ](https://openaq.org/#/?_k=ogddyg)
 4. AirVisual Project and their Air Quality [API](https://www.airvisual.com/)
 5. Bitspi AirPollution [API](https://airpollutionapi.com/) (Just provides information in India)
 
@@ -86,4 +85,10 @@ JSON Response:
 ```
 #### Steps to extract data from JSON API: 
 1. Get token for all API access from [here](https://aqicn.org/data-platform/token/#/)
-2. Request the api based on their proposed [doc](https://aqicn.org/json-api/doc/)
+2. Request the api based on their proposed [doc](https://aqicn.org/json-api/doc/) </br>
+### OpenAQ
+They aggregate physical air quality data from public data sources provided by government, research-grade and other sources. </br>
+##### Note: 
+1. They do not validate or transform the data from their originating sources. 
+2. Real-time data, by their nature, often have not undergone quality assurance or control processes by their originating sources. 
+

@@ -109,7 +109,7 @@ The U.S. EPA [AirNow program](www.AirNow.gov) protects public health by providin
 * Air quality observations are updated once per hour and forecasts are issued once per day
 * Users must limit web service calls for a given API key to the maximum permitted for the web service (500 requests per hour for sensors' observations) find more [here](https://docs.airnowapi.org/CurrentObservationsByLatLon/docs) 
 ### Summary:
-* It does not cover Canada
+* It does not cover __Canada__
 * Querying Web Service does not return any results for Canadian cities including Calgary, Edmonton, and Vancouver, but it works fine for the US cities
 * Interactive querying [web service](https://docs.airnowapi.org/CurrentObservationsByLatLon/query)
 * API documentation Rating = 3/5

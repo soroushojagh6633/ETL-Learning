@@ -4,7 +4,8 @@
 2. [Ambee](http://docs.ambeedata.com/)
 3. [Openaq](https://openaq.org/#/?_k=ogddyg)
 4. AirVisual Project and their Air Quality [API](https://www.airvisual.com/)
-5. Bitspi AirPollution [^1] [API](https://airpollutionapi.com/)  [^1]:(Just provides information in India)
+5. Bitspi AirPollution [^1] [API](https://airpollutionapi.com/) 
+[^1]:(Just provides information in India)
 
 ### World Air Quality Index Project
 Brief review of JSON [API](https://aqicn.org/json-api/doc/):

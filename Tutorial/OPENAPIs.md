@@ -176,7 +176,7 @@ url = https://api.openaq.org/v1/measurements?country=CA&city=ALBERTA&location=Ca
 ```JSON Response
 {
   "meta": {
-    "name": "openaq-api",
+    "name": "openaq-api", 
     "license": "CC BY 4.0",
     "website": "https://docs.openaq.org/",
     "page": 1,

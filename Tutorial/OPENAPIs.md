@@ -1,6 +1,7 @@
 ## Tutorial README file
 ### Different Open APIs for Air Pollution: 
-1. World Air Quality Index [Project](https://aqicn.org/api/) 
+1. World Air Quality [^1] Index [Project](https://aqicn.org/api/) 
+[^1]: Salam
 2. [Ambee](http://docs.ambeedata.com/)
 3. [Openaq](https://openaq.org/#/?_k=ogddyg)
 4. AirVisual Project and their Air Quality [API](https://www.airvisual.com/)

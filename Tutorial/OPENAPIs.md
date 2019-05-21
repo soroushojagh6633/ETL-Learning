@@ -155,7 +155,7 @@ url = http://www.airnowapi.org/aq/observation/latLong/current/?format=applicatio
 ```
 
 ### 3- OpenAQ 
-OpenAQ is the world's first open, real-time and historical air quality platform, aggregating government-measured and research-grade data - entirely open-source. They aggregate physical air quality data from public data sources provided by government, research-grade and other sources. </br>
+[OpenAQ](https://openaq.org/#/?_k=8sjst5) is the real-time and historical air quality platform, aggregating government-measured and research-grade data - entirely open-source. They aggregate physical air quality data from public data sources provided by government, research-grade and other sources. </br>
 #### Stored data in Open AQ platform: 
 PM2.5, PM10, CO, SO2, NO2, O3, and BC. You can read more [here](https://github.com/openaq/openaq-info/blob/master/FAQ.md) and [here](https://medium.com/@openaq/how-in-the-world-do-you-access-air-quality-data-older-than-90-days-on-the-openaq-platform-8562df519ecd)
 ##### Note: 
@@ -165,9 +165,9 @@ PM2.5, PM10, CO, SO2, NO2, O3, and BC. You can read more [here](https://github.c
 * There are IP-based limits imposed of ~2000 requests over a 5 minute period. If you are running into a number of failed requests, please check the rate of requests.</br>
 ### Summary: 
 * It is __Open Source__
-* Its coverage includes __Canada__
+* Covers 10,408 locations in 70 countries including __Canada__
 * GitHup repositories like [this](https://github.com/openaq/), [this](https://gist.github.com/jflasher/573525aff9a5d8a966e5718272ceb25a), and [this](https://rubygems.pkg.github.com/topics/open-aq)
-* Many open source APIs like [this](), [this](), and [this]()
+* Many projects using OpenAQ API [CityAQ](https://jackkoppa.github.io/cityaq/search), [Airveda](https://www.airveda.com/), and [ARISense](https://arisense.io/) more projects are listed [here](https://openaq.org/#/community?_k=1eiue9)
 ##### Open AQ Platform [API](https://docs.openaq.org/)
 [Sample](https://dolugen.github.io/openaq-browser/#/) http request and response: 
 ```HTTP Request

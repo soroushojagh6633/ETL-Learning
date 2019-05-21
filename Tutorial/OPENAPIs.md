@@ -101,9 +101,9 @@ JSON Response:
 2. Request the api based on their proposed [doc](https://aqicn.org/json-api/doc/) </br>
 ### 2- AirNow [API](https://docs.airnowapi.org/)
 #### A brief review of AirNow:
-The U.S. EPA [AirNow program](www.AirNow.gov) protects public health by providing forecast and real-time observed air quality information across the United States, Canada, and Mexico. AirNow receives real-time air quality observations from over 2,000 monitoring stations and collects forecasts for more than 300 cities. 
+The U.S. EPA [AirNow program](https://www.airnow.gov/) protects public health by providing forecast and real-time observed air quality information across the United States, Canada, and Mexico. AirNow receives real-time air quality observations from over 2,000 monitoring stations and collects forecasts for more than 300 cities. 
 ### Limitations:
-* Mostly support the US 
+* Covers the __US__ 
 * Sensor observation web service will respond to up to 500 requests within a one-hour period
 * Requires API key as the authentication method
 * Air quality observations are updated once per hour and forecasts are issued once per day
@@ -161,8 +161,13 @@ PM2.5, PM10, CO, SO2, NO2, O3, and BC. You can read more [here](https://github.c
 ##### Note: 
 1. They do not validate or transform the data from their originating sources. 
 2. Real-time data, by their nature, often have not undergone quality assurance or control processes by their originating sources.
-##### Limitation:
-There are IP-based limits imposed of ~2000 requests over a 5 minute period. If you are running into a number of failed requests, please check the rate of requests.</br>
+#### Limitation:
+* There are IP-based limits imposed of ~2000 requests over a 5 minute period. If you are running into a number of failed requests, please check the rate of requests.</br>
+### Summary: 
+* It is __Open Source__
+* Its coverage includes __Canada__
+* GitHup repositories like [this](https://github.com/openaq/), [this](https://gist.github.com/jflasher/573525aff9a5d8a966e5718272ceb25a), and [this](https://rubygems.pkg.github.com/topics/open-aq)
+* Many open source APIs like [this](), [this](), and [this]()
 ##### Open AQ Platform [API](https://docs.openaq.org/)
 [Sample](https://dolugen.github.io/openaq-browser/#/) http request and response: 
 ```HTTP Request

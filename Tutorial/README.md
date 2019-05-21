@@ -8,7 +8,7 @@
 
 ### Environmental Protection Agency Data Feeds:
 Brief review of JSON API:
-* Access to more than 9000 station level and 600 city level data
+* **Access to more than 9000 station level and 600 city level data**
 * Geo-location query (based on latitude/longitude or IP address)
 * Individual AQI for all pollutants (PM2.5, PM10, NO2, CO, SO2, Ozone)
 * Station name and coordinates

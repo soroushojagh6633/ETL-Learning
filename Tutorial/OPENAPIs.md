@@ -90,6 +90,44 @@ JSON Response:
 ### 2- AirNow [API](https://docs.airnowapi.org/)
 #### A brief review of AirNow:
 The U.S. EPA [AirNow program](www.AirNow.gov) protects public health by providing forecast and real-time observed air quality information across the United States, Canada, and Mexico. AirNow receives real-time air quality observations from over 2,000 monitoring stations and collects forecasts for more than 300 cities. 
+##### Sample url and JSON response
+```HTTP Request
+url = http://www.airnowapi.org/aq/observation/latLong/current/?format=application/json&latitude=34.0410&longitude=-118.3444&distance=25&API_KEY=1111
+```
+```JSON Response
+[
+  {
+    "DateObserved": "2019-05-20 ",
+    "HourObserved": 18,
+    "LocalTimeZone": "PST",
+    "ReportingArea": "NW Coastal LA",
+    "StateCode": "CA",
+    "Latitude": 34.0505,
+    "Longitude": -118.4566,
+    "ParameterName": "O3",
+    "AQI": 47,
+    "Category": {
+      "Number": 1,
+      "Name": "Good"
+    }
+  },
+  {
+    "DateObserved": "2019-05-20 ",
+    "HourObserved": 18,
+    "LocalTimeZone": "PST",
+    "ReportingArea": "NW Coastal LA",
+    "StateCode": "CA",
+    "Latitude": 34.0505,
+    "Longitude": -118.4566,
+    "ParameterName": "PM2.5",
+    "AQI": 11,
+    "Category": {
+      "Number": 1,
+      "Name": "Good"
+    }
+  }
+]
+```
 
 ### OpenAQ
 They aggregate physical air quality data from public data sources provided by government, research-grade and other sources. </br>

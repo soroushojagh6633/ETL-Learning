@@ -8,9 +8,10 @@
 
 ### World Air Quality Index Project
 Brief review of JSON [API](https://aqicn.org/json-api/doc/):
-'''python
-print a
-'''
+```python
+s = "Python syntax highlighting"
+print s
+```
 * *Access to more than 9000 station level and 600 city level data*
 * *Geo-location query (based on latitude/longitude or IP address)*
 * *Individual AQI for all pollutants (PM2.5, PM10, NO2, CO, SO2, Ozone)*

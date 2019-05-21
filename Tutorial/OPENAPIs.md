@@ -8,7 +8,7 @@
 
 ### World Air Quality Index Project
 Brief review of JSON [API](https://aqicn.org/json-api/doc/):
-```python
+```
 s = "Python syntax highlighting"
 print s
 ```

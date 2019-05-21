@@ -16,6 +16,7 @@ Brief review of JSON [API](https://aqicn.org/json-api/doc/):
 * *Current weather conditions*
 * *Stations within a map lat/lng bounds*
 * *Search stations by name* </br>
+##### Sample JSON data:
 ```HTTP Request:
 url: https://api.waqi.info/feed/Calgary/?token=12344444...
 JSON Response:
@@ -83,10 +84,6 @@ JSON Response:
     }
 }
 ```
-
-##### Sample JSON data: 
-
-
 #### Steps to extract data from JSON API: 
 1. Get token for all API access from [here](https://aqicn.org/data-platform/token/#/)
-2. 
+2. Request the api based on their proposed [doc](https://aqicn.org/json-api/doc/)

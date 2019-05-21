@@ -5,7 +5,7 @@
 4. [OpenAQ](https://openaq.org/#/?_k=ogddyg)
 5. AirVisual Project and their Air Quality [API](https://www.airvisual.com/)
 6. Bitspi AirPollution [API](https://airpollutionapi.com/) (Just provides information in India)
-<span style="color:red">text in red</span>
+
 ### 1- World Air Quality Index [Project](http://aqicn.org/contact/)
 Brief review of JSON [API](https://aqicn.org/json-api/doc/):
 * *Access to more than 9000 stations worldwide ~ that’s around 600 major cities in 70 [countries](http://aqicn.org/sources/)* 
@@ -20,7 +20,9 @@ Brief review of JSON [API](https://aqicn.org/json-api/doc/):
 ### Limitations: 
 1. It does not support historical data
 2. Maximum of 10 requests per second per user (all the users with the same token consider as a user) 
-
+### Strengths
+-API documentation Rating="****"
+-Online and interactive query maker
 ##### Sample JSON data:
 ```HTTP Request:
 url: https://api.waqi.info/feed/Calgary/?token=12344444...

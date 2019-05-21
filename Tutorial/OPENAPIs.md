@@ -129,9 +129,47 @@ url = http://www.airnowapi.org/aq/observation/latLong/current/?format=applicatio
 ]
 ```
 
-### OpenAQ
-They aggregate physical air quality data from public data sources provided by government, research-grade and other sources. </br>
+### 3- OpenAQ 
+OpenAQ is the world's first open, real-time and historical air quality platform, aggregating government-measured and research-grade data - entirely open-source. They aggregate physical air quality data from public data sources provided by government, research-grade and other sources. </br>
+#### Stored data in Open AQ platform: 
+PM2.5, PM10, CO, SO2, NO2, O3, and BC. You can read more [here](https://github.com/openaq/openaq-info/blob/master/FAQ.md) and [here](https://medium.com/@openaq/how-in-the-world-do-you-access-air-quality-data-older-than-90-days-on-the-openaq-platform-8562df519ecd)
 ##### Note: 
 1. They do not validate or transform the data from their originating sources. 
-2. Real-time data, by their nature, often have not undergone quality assurance or control processes by their originating sources. 
-
+2. Real-time data, by their nature, often have not undergone quality assurance or control processes by their originating sources.
+##### Limitation:
+There are IP-based limits imposed of ~2000 requests over a 5 minute period. If you are running into a number of failed requests, please check the rate of requests.</br>
+##### Open AQ Platform [API](https://docs.openaq.org/)
+Sample http request and response: 
+```HTTP Request
+url = https://api.openaq.org/v1/measurements?country=CA&city=ALBERTA&location=Calgary+Central2&parameter=pm25&date_from=2019-05-20&date_to=2019-05-20
+```
+```JSON Response
+{
+  "meta": {
+    "name": "openaq-api",
+    "license": "CC BY 4.0",
+    "website": "https://docs.openaq.org/",
+    "page": 1,
+    "limit": 100,
+    "found": 1
+  },
+  "results": [
+    {
+      "location": "Calgary Central2",
+      "parameter": "pm25",
+      "date": {
+        "utc": "2019-05-20T00:00:00.000Z",
+        "local": "2019-05-19T17:00:00-07:00"
+      },
+      "value": 4.5,
+      "unit": "µg/m³",
+      "coordinates": {
+        "latitude": 51.047611,
+        "longitude": -114.075165
+      },
+      "country": "CA",
+      "city": "ALBERTA"
+    }
+  ]
+}
+```

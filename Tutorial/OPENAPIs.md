@@ -1,11 +1,12 @@
 ## Different Open APIs for Air Pollution: 
 1. World Air Quality Index [Project](https://aqicn.org/api/) 
-2. [Ambee](http://docs.ambeedata.com/)
-3. [OpenAQ](https://openaq.org/#/?_k=ogddyg)
-4. AirVisual Project and their Air Quality [API](https://www.airvisual.com/)
-5. Bitspi AirPollution [API](https://airpollutionapi.com/) (Just provides information in India)
+2. AirNow [API](https://docs.airnowapi.org/)
+3. [Ambee](http://docs.ambeedata.com/)
+4. [OpenAQ](https://openaq.org/#/?_k=ogddyg)
+5. AirVisual Project and their Air Quality [API](https://www.airvisual.com/)
+6. Bitspi AirPollution [API](https://airpollutionapi.com/) (Just provides information in India)
 
-### World Air Quality Index Project
+### 1- World Air Quality Index Project
 Brief review of JSON [API](https://aqicn.org/json-api/doc/):
 * *Access to more than 9000 station level and 600 city level data*
 * *Geo-location query (based on latitude/longitude or IP address)*
@@ -86,6 +87,10 @@ JSON Response:
 #### Steps to extract data from JSON API: 
 1. Get token for all API access from [here](https://aqicn.org/data-platform/token/#/)
 2. Request the api based on their proposed [doc](https://aqicn.org/json-api/doc/) </br>
+### 2- AirNow [API](https://docs.airnowapi.org/)
+#### A brief review of AirNow:
+The U.S. EPA [AirNow program](www.AirNow.gov) protects public health by providing forecast and real-time observed air quality information across the United States, Canada, and Mexico. AirNow receives real-time air quality observations from over 2,000 monitoring stations and collects forecasts for more than 300 cities. 
+
 ### OpenAQ
 They aggregate physical air quality data from public data sources provided by government, research-grade and other sources. </br>
 ##### Note: 

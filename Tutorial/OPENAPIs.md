@@ -17,5 +17,5 @@ Brief review of JSON API:
 * *Stations within a map lat/lng bounds*
 * *Search stations by name* </br>
 #### Steps to extract data from JSON API: 
-1. Get token for all API access from here: https://aqicn.org/data-platform/token/#/ 
+1. Get token for all API access from [here](https://aqicn.org/data-platform/token/#/)
 2. 

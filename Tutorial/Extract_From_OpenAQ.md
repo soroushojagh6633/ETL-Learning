@@ -114,11 +114,10 @@ print (resp.head(20))
 # display the first 10 rows
 resp.info()
 ```
-
-
-
+How to make a query of extracted results:
 ```Python
-
+#Making a query which show information about the Canada
+print (resp.query("country == 'CA'"))
 ```
 ```Python
 

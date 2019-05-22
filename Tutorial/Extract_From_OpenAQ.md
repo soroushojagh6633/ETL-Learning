@@ -122,9 +122,17 @@ print (resp.query("country == 'CA'"))
 Result:</br>
 
 ![alt text](https://github.com/soroushojagh6633/ETL-Learning/blob/master/img/CA_cities_OpenAQ.PNG "Information of OpenAQ in Canada")
-```Python
 
+Getting all the parameters available in OpenAQ:
+```Python
+#Extracting all the parameters available in OpenAQ
+res = api.parameters(df=True)
+
+print (res)
 ```
+Result:</br>
+
+![alt text](https://github.com/soroushojagh6633/ETL-Learning/blob/master/img/Parameters_OpenAQ.PNG "Parameters available in OpenAQ")
 ```Python
 
 ```

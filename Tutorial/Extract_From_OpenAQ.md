@@ -6,9 +6,9 @@
 4. py-openaq
 ## How to install libraries: 
 You can install the package directly via pypi through pip:
-
-cmd: pip install py-openaq
-
+```
+>>> pip install py-openaq
+```
 ### In the time of creating this Git repository I just installed the following versions of required python libraries: 
 pandas: 0.24.2
 requests: 2.22.0

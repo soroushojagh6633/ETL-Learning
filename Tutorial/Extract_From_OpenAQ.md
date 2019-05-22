@@ -222,7 +222,7 @@ pandas.set_option('display.max_columns', 9)
 # Print out the statistics on a per-location basiss
 print(res.groupby(['location'])['value'].describe().head(10))
 ```
-Result:</br>
+Result which shows Count, Min, Max, Mean, Standard Deviation, Q1, Median, and Q3:</br>
 
 ![alt text](https://github.com/soroushojagh6633/ETL-Learning/blob/master/img/Alberta_Statistics_OpenAQ.PNG "Statistics about the 10,000 latest measurements extracted from all the stations in Alberta, Canada")
 ```Python 

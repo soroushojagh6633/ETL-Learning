@@ -2,14 +2,17 @@
 ## Requirements: 
 1. Python 2.7+
 2. Pandas
-3. seaborn
-4. requests
-5. py-openaq
+3. requests
+4. py-openaq
 ## How to install libraries: 
 You can install the package directly via pypi through pip:
 
 cmd: pip install py-openaq
 
+### In the time of creating this Git repository I just installed the following versions of required python libraries: 
+pandas: 0.24.2
+requests: 2.22.0
+py-openaq: 1.1.0
 ## First code in Python: 
 ```Python
 #importing libraries
@@ -75,5 +78,17 @@ We want to work with JSON objects and Pandas provides a great chance to easily d
 from pandas.io.json import json_normalize
 
 df = json_normalize(resp)
+print(df.head(20))
+```
+As of v 0.3.0 of py-openaq, DataFrame is added to the following methods: 
+* *cities
+* *countries
+* *latest
+* *locations
+* *measurements
+It will nicely map a JSON object into the required datetime format which can be easily plotted. The sample python code is as follow: 
+```Python
+df = api.cities(df=True)
+
 print(df.head(20))
 ```

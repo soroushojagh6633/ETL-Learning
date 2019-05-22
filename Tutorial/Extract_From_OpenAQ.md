@@ -119,7 +119,8 @@ How to make a query of extracted results:
 #Making a query which show information about the Canada
 print (resp.query("country == 'CA'"))
 ```
-Result: 
+Result:</br>
+
 ![alt text](https://github.com/soroushojagh6633/ETL-Learning/blob/master/img/CA_cities_OpenAQ.PNG "Information of OpenAQ in Canada")
 ```Python
 

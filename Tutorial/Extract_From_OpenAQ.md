@@ -69,3 +69,11 @@ print("Statu: " + str(status)  + "\n" + "JSON: " + str(resp))
  ]
 }
 ```
+### Damping JSON responses into a DataFrame:
+We want to work with JSON objects and Pandas provides a great chance to easily damp JSON object into a DataFrame. 
+```Python
+from pandas.io.json import json_normalize
+
+df = json_normalize(resp)
+print(df.head(20))
+```

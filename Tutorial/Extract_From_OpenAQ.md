@@ -148,11 +148,53 @@ Result:</br>
 ![alt text](https://github.com/soroushojagh6633/ETL-Learning/blob/master/img/Info_Calgary_OpenAQ.PNG "General Information about the city of Calgary_Central station")
 ![alt text](https://github.com/soroushojagh6633/ETL-Learning/blob/master/img/Info_Calgary_NW_OpenAQ.PNG "General Information about the city of Calgary_NW station")
 
-```Python
+How to grab the latest value of PM2.5 in Calgary Central station?
 
+```Python
+# Getting the latest value of PM2.5 for the central station located in Calgary
+res = api.latest(city='ALBERTA', location='Calgary Central2', parameter='pm25')
+
+print(res)
 ```
-```Python
-
+results in JSON format is like this:
+```HTML
+(200,
+{
+  'meta': {
+    'name': 'openaq-api',
+    'license': 'CC BY 4.0',
+    'website': 'https://docs.openaq.org/',
+    'page': 1,
+    'limit': 100,
+    'found': 1,
+    'pages': 1
+  },
+  'results': [
+    {
+      'location': 'Calgary Central2',
+      'city': 'ALBERTA',
+      'country': 'CA',
+      'distance': 7164117.352361423,
+      'measurements': [
+        {
+          'parameter': 'pm25',
+          'value': 5,
+          'lastUpdated': '2019-05-22T19:00:00.000Z',
+          'unit': 'µg/m³',
+          'sourceName': 'AirNow',
+          'averagingPeriod': {
+            'value': 1,
+            'unit': 'hours'
+          }
+        }
+      ],
+      'coordinates': {
+        'latitude': 51.04761,
+        'longitude': -114.075165
+      }
+    }
+  ]
+})
 ```
 ```Python
 

@@ -210,9 +210,21 @@ res = api.measurements(city='ALBERTA', location='Calgary Central2', parameter='p
 
 print(res.head(100))
 ```
-```Python
+### Data Visualization 
+After damping the data into a DataFrame we can do some data visualization and data summarization to get a general view or maybe do some comparision between different locations. Here in this tutorial I want to show, summarize, and compare the value of PM2.5 between all the stations in the Alberta, Canada. 
+#### * First step: Extracting 10,000 measurements of PM2.5 from the desired stations and calculate statistics about the extracted data
 
+```Python
+#Extract 10,000 PM2.5 measurements for all the stations in Alberta  
+res = api.measurements(city='ALBERTA', parameter='pm25', limit=10000, df=True)
+
+pandas.set_option('display.max_columns', 9)
+# Print out the statistics on a per-location basiss
+print(res.groupby(['location'])['value'].describe().head(10))
 ```
+Result:</br>
+
+![alt text](https://github.com/soroushojagh6633/ETL-Learning/blob/master/img/Alberta_Stat_OpenAQ.PNG "Statistics about the 10,000 latest measurements extracted from all the stations in Alberta, Canada")
 ```Python
 
 ```

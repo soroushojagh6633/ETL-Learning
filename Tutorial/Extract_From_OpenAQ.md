@@ -9,6 +9,17 @@ You can install the package directly via pypi through pip:
 ```
 >>> pip install py-openaq
 ```
+### OpenAQ API data model: 
+The API is working with 8 different entities including:
+* cities: provides a simple listing of cities within the platforms
+* countries: provides a simple listing of countries within the platform
+* fetches: providing data about individual fetch operations that are used to populate data in the platform
+* latest: provides the latest value of each available parameter for every location in the system
+* locations: provides a list of measurement locations and their meta data
+* measurements: provides data about individual measurements
+* parameters: provides a simple listing of parameters within the platform
+* sources: provides a list of data sources
+
 ### In the time of creating this Git repository I just installed the following versions of required python libraries: 
 pandas: 0.24.2 </br>
 requests: 2.22.0 </br>
@@ -18,10 +29,10 @@ py-openaq: 1.1.0 </br>
 #importing libraries
 import openaq
 
-#Make a request to OpenAQ by using the method so called OpenAQ()
+#Make an instance of the openaq.OpenAQ class to extract data
 api = openaq.OpenAQ()
 # Status will be (200:"Success", 40x: "Bad Request, and 500: "Server Error")
-# resp is the JSON object that comes from the server
+# resp is the JSON object that comes from the server 
 status, resp = api.cities()
 print("Statu: " + str(status)  + "\n" + "JSON: " + str(resp))
 # print("Status: " + str(status) + "\n" + "JSON: " + resp)
@@ -93,3 +104,44 @@ df = api.cities(df=True)
 
 print(df.head(20))
 ```
+
+How to extract limited number of results and damp the JSON object in a DataFrame:
+```Python
+#Extracting all the cities from OpenAQ
+resp = api.cities(df=True, limit=10000)
+print (resp.head(20))
+
+# display the first 10 rows
+resp.info()
+```
+
+
+
+```Python
+
+```
+```Python
+
+```
+```Python
+
+```
+```Python
+
+```
+```Python
+
+```
+```Python
+
+```
+```Python
+
+```
+```Python
+
+```
+```Python
+
+```
+

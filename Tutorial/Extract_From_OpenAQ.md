@@ -270,9 +270,10 @@ plt.show()
 ```
 Result: Box-Plot of extracted data:</br>
 ![alt text](https://github.com/soroushojagh6633/ETL-Learning/blob/master/img/Box_plot.png "Box-Plot from all the 10,000 PM2.5 measurements from all the stations in Alberta, Canada")
-```Python
 
-```
+### Extracting the latest PM2.5 values every five minutes
+We are aware that the frequency of updating air quality parameters in OpenAQ is one hour. But here to meet the requirements of our assignment, we want to request pm2.5 values every five minutes. 
+
 
 ```Python
 

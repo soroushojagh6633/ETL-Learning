@@ -1,4 +1,4 @@
-# In this tutorial we want to learn how we can extract online air quality data from OpenAQ by using Python
+# In this tutorial we want to learn how we can extract real-time air quality data from OpenAQ by using Python
 ## Requirements: 
 1. Python 2.7+
 2. Pandas

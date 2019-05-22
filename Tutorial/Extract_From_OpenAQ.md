@@ -133,9 +133,18 @@ print (res)
 Result:</br>
 
 ![alt text](https://github.com/soroushojagh6633/ETL-Learning/blob/master/img/Parameters_OpenAQ.PNG "Parameters available in OpenAQ")
-```Python
 
+Getting general information about the city of Calgary, AB, Canada:
+
+```Python
+#Getting all the information related to the city of Calgary
+res = api.locations(city='ALBERTA', df=True)
+
+print(res.iloc[3])
 ```
+Result:</br>
+
+![alt text](https://github.com/soroushojagh6633/ETL-Learning/blob/master/img/Info_Calgary_OpenAQ.PNG "General Information about the city of Calgary")
 ```Python
 
 ```

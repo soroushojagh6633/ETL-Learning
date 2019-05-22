@@ -247,10 +247,29 @@ plt.show()
 Result: All the time series shown as follow:</br>
 ![alt text](https://github.com/soroushojagh6633/ETL-Learning/blob/master/img/Statistics_Plot.png "Time series plotted from all the 10,000 PM2.5 measurements from all the stations in Alberta, Canada")
 
+The Box-Plot of the extracted data shown as follow:
 ```Python
+fig, ax = plt.subplots(1, figsize=(14,7))
 
+ax = sns.boxplot(
+    x='location',
+    y='value',
+    data=res.query("value >= 0.0"),
+    fliersize=0,
+    palette='deep',
+    ax=ax)
+
+ax.set_ylim([0, 25])
+ax.set_ylabel("$PM_{2.5}\;[\mu gm^{-3}]$", fontsize=18)
+ax.set_xlabel("")
+
+sns.despine(offset=10)
+
+plt.xticks(rotation=90)
+plt.show()
 ```
-
+Result: Box-Plot of extracted data:</br>
+![alt text](https://github.com/soroushojagh6633/ETL-Learning/blob/master/img/Box_plot.png "Box-Plot from all the 10,000 PM2.5 measurements from all the stations in Alberta, Canada")
 ```Python
 
 ```

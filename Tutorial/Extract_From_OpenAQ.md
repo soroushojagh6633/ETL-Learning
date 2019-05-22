@@ -225,7 +225,52 @@ print(res.groupby(['location'])['value'].describe().head(10))
 Result which shows Count, Min, Max, Mean, Standard Deviation, Q1, Median, and Q3:</br>
 
 ![alt text](https://github.com/soroushojagh6633/ETL-Learning/blob/master/img/Alberta_Statistics_OpenAQ.PNG "Statistics about the 10,000 latest measurements extracted from all the stations in Alberta, Canada")
+#### * Second step: Visualizing the extracted data for each station as a Time Series
 ```Python 
+fig, ax = plt.subplots(1, figsize=(10, 6))
+
+for group, df in res.groupby('location'):
+    # Query the data to only get positive values and resample to hourly
+    _df = df.query("value >= 0.0").resample('1h').mean()
+
+    _df.value.plot(ax=ax, label=group)
+
+ax.legend(loc='best')
+ax.set_ylabel("$PM_{2.5}$  [$\mu g m^{-3}$]", fontsize=20)
+ax.set_xlabel("")
+sns.despine(offset=5)
+
+plt.legend(bbox_to_anchor=(1.05, 1), loc=2, borderaxespad=0.)
+
+plt.show()
+```
+Result: All the time series shown as follow:</br>
+![alt text](https://github.com/soroushojagh6633/ETL-Learning/blob/master/img/Statistics_Plot.png "Time series plotted from all the 10,000 PM2.5 measurements from all the stations in Alberta, Canada")
+
+```Python
 
 ```
 
+```Python
+
+```
+
+```Python
+
+```
+
+```Python
+
+```
+
+```Python
+
+```
+
+```Python
+
+```
+
+```Python
+
+```

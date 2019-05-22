@@ -141,10 +141,13 @@ Getting general information about the city of Calgary, AB, Canada:
 res = api.locations(city='ALBERTA', df=True)
 
 print(res.iloc[3])
+print(res.iloc[4])
 ```
 Result:</br>
 
-![alt text](https://github.com/soroushojagh6633/ETL-Learning/blob/master/img/Info_Calgary_OpenAQ.PNG "General Information about the city of Calgary")
+![alt text](https://github.com/soroushojagh6633/ETL-Learning/blob/master/img/Info_Calgary_OpenAQ.PNG "General Information about the city of Calgary_Central station")
+![alt text](https://github.com/soroushojagh6633/ETL-Learning/blob/master/img/Info_Calgary_NW_OpenAQ.PNG "General Information about the city of Calgary_NW station")
+
 ```Python
 
 ```

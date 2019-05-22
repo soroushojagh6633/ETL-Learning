@@ -1,9 +1,15 @@
 # In this tutorial we want to learn how we can extract online air quality data from OpenAQ by using Python
-## Prerequisites: 
-1. Pandas
-2. seaborn
-3. requests
-4. py-openaq
+## Requirements: 
+1. Python 2.7+
+2. Pandas
+3. seaborn
+4. requests
+5. py-openaq
+## How to install libraries: 
+You can install the package directly via pypi through pip:
+
+>>> pip install py-openaq
+
 ## First code in Python: 
 ```Python
 #importing libraries

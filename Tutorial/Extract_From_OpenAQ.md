@@ -24,7 +24,7 @@ print("Statu: " + str(status)  + "\n" + "JSON: " + str(resp))
 # print("Status: " + str(status) + "\n" + "JSON: " + resp)
 ```
 ### The result will be something like this which shows the first 100 cities extracted from OpenAQ
-```JSON
+```HTML
 {
   'meta': {
     'name': 'openaq-api',

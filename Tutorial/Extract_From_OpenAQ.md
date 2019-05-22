@@ -203,8 +203,12 @@ res = api.latest(city='ALBERTA', location='Calgary Central2', parameter='pm25', 
 
 print(res.head(10))
 ```
+Getting 10000 last PM2.5 measurements for the city of Calgary: 
 ```Python
+#Getting the last 10000 PM2.5 measurements in the city of Calgary, AB
+res = api.measurements(city='ALBERTA', location='Calgary Central2', parameter='pm25', limit=10000, df=True)
 
+print(res.head(100))
 ```
 ```Python
 

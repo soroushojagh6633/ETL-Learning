@@ -225,7 +225,7 @@ print(res.groupby(['location'])['value'].describe().head(10))
 Result:</br>
 
 ![alt text](https://github.com/soroushojagh6633/ETL-Learning/blob/master/img/Alberta_Stat_OpenAQ.PNG "Statistics about the 10,000 latest measurements extracted from all the stations in Alberta, Canada")
-```Python
+```Python 
 
 ```
 

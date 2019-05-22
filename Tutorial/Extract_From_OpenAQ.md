@@ -81,11 +81,11 @@ df = json_normalize(resp)
 print(df.head(20))
 ```
 As of v 0.3.0 of py-openaq, DataFrame is added to the following methods: 
-* *cities
-* *countries
-* *latest
-* *locations
-* *measurements
+* *cities*
+* *countries*
+* *latest*
+* *locations*
+* *measurements*
 It will nicely map a JSON object into the required datetime format which can be easily plotted. The sample python code is as follow: 
 ```Python
 df = api.cities(df=True)

@@ -156,7 +156,7 @@ res = api.latest(city='ALBERTA', location='Calgary Central2', parameter='pm25')
 
 print(res)
 ```
-results in JSON format is like this:
+Results in JSON format is as follows:
 ```HTML
 (200,
 {
@@ -196,8 +196,12 @@ results in JSON format is like this:
   ]
 })
 ```
+It can be simply damp into a DataFrame by using: 
 ```Python
+# Getting the latest value of PM2.5 for the central station located in Calgary
+res = api.latest(city='ALBERTA', location='Calgary Central2', parameter='pm25', df=True)
 
+print(res.head(10))
 ```
 ```Python
 

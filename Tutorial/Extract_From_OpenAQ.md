@@ -8,7 +8,7 @@
 ## How to install libraries: 
 You can install the package directly via pypi through pip:
 
->>> pip install py-openaq
+cmd: pip install py-openaq
 
 ## First code in Python: 
 ```Python

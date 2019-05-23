@@ -198,7 +198,7 @@ url = https://api.openaq.org/v1/measurements?country=CA&city=ALBERTA&location=Ca
         "longitude": -114.075165
       },
       "country": "CA",
-      "city": "ALBERTA"
+      "city": "ALBERTA" 
     }
   ]
 }

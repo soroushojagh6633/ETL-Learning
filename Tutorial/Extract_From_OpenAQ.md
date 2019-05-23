@@ -94,8 +94,8 @@ print("Statu: " + str(status)  + "\n" + "JSON: " + str(resp))
  ]
 }
 ```
-## Damping JSON responses into a DataFrame:
-We want to work with JSON objects and Pandas provides a great chance to easily damp JSON object into a DataFrame. 
+## Converting JSON responses into a DataFrame:
+We want to work with JSON objects and Pandas provides a great chance to easily convert JSON object into a DataFrame. 
 ```Python
 from pandas.io.json import json_normalize
 
@@ -116,7 +116,7 @@ df = api.cities(df=True)
 print(df.head(20))
 ```
 
-How to extract limited number of results and damp the JSON object in a DataFrame:
+How to extract limited number of results and convert the JSON object in a DataFrame:
 ```Python
 #Extracting all the cities from OpenAQ
 resp = api.cities(df=True, limit=10000)

@@ -48,17 +48,17 @@ With The JSON body like:
   }]
 }
 ```
-So we are in need of extracting a list of metadata from OpenAQ including: 
+So we are in need of extracting a list of metadata from OpenAQ including and the mapping would be as follow: 
 ### To create a Thing:
-* (Mandatory) name: String
-* (Mandatory) description: String 
-* (Optional) Deployment Condition: String 
-* (Optional) Case Used: String </br>
+* (Mandatory) name: String // location: "Calgary Central2", OpenAQ API: api.locations(city='ALBERTA', df=True).iloc[3] 
+* (Mandatory) description: String // "Air quality monitoring station"  
+* (Optional) Deployment Condition: String // "Cathedral Energy DT, On the roof" 
+* (Optional) Case Used: String // "To monitor No2, O3, PM2.5, and CO."</br> 
 ### To create a Locations:
-* (Mandatory) name: String
-* (Mandatory) description: String 
-* (Mandatory) encodingType: ValueCode
-* (Mandatory) location: Any (Depends on encodingType)</br>
+* (Mandatory) name: String // "Cathedral Energy DT"
+* (Mandatory) description: String // "623 6 Avenue Southwest, Calgary, Division 6, AB T2P0T5, Downtown Calgary, Calgary Calgary Alberta Canada" 
+* (Mandatory) encodingType: ValueCode // "application/vnd.geo+json"
+* (Mandatory) location: Any (Depends on encodingType) // "coordinates": [-114.075,51.0476],"type": "Point"</br> OpenAQ API: api.locations(city='ALBERTA', df=True).iloc[3] 
 ### To create Datastreams: 
 * (Mandatory) name:	String
 * (Mandatory) description	:	String

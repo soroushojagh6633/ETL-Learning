@@ -274,11 +274,27 @@ Result: Box-Plot of extracted data:</br>
 ### Extracting the latest PM2.5 values every five minutes
 We are aware that the frequency of updating air quality parameters in OpenAQ is one hour. But here to meet the requirements of our assignment, we want to request pm2.5 values every five minutes. 
 
+To eschedule events which is responsible to request real-time PM2.5 values, I used [sched](https://docs.python.org/3/library/sched.html) python module as follow:
 
 ```Python
+import sched, time
 
+#Instantiate sched module
+s = sched.scheduler(time.time, time.sleep)
+
+#The desired request function to get PM2.5 values
+def request_OpenAQ(sc):
+    # Getting the latest value of PM2.5 for the central station located in Calgary
+    res = api.latest(city='ALBERTA', location='Calgary Central2', parameter='pm25', df=True)
+
+    print(res)
+    s.enter(300, 1, request_OpenAQ, (sc,))
+
+s.enter(0, 1, request_OpenAQ, (s,))
+s.run()
 ```
-
+Result: </br>
+![alt text](https://github.com/soroushojagh6633/ETL-Learning/blob/master/img/Real-time_OpenAQ.PNG "Getting the last PM2.5 every five minutes")
 ```Python
 
 ```

@@ -296,3 +296,5 @@ s.run()
 Result: </br>
 ![alt text](https://github.com/soroushojagh6633/ETL-Learning/blob/master/img/Real-time_OpenAQ.PNG "Getting the last PM2.5 every five minutes")
 
+### Summary
+In all, through this tutorial we could hopefuly extract real-time PM2.5 values from all the desired stations located in Alberta, Canada. In addition, visualization of data plays an important role in getting a general knowledge about the extracted data. We could hopefuly represent extracted data as time series for all the stations located in Alberta. In the next tutorial, we will load the extracted data into an instances of OGC SensorThings API server.   

@@ -2,12 +2,13 @@
 ## Table of Content
 1. [Requirements](#requirements)
 2. [Setting up the environment](#how-to-install-libraries)
-2. [OpenAQ Data Model](#openaq-api-data-model)
-2. []()
-2. []()
-2. []()
-2. []()
-2. []()
+3. [OpenAQ Data Model](#openaq-api-data-model)
+4. [Version of python libraries](#version-of-python-libraries)
+5. [Hello World](#first-code-in-python)
+6. [Damping JSON Objects into a DataFrames](#damping-json-responses-into-a-dataframe)
+7. [Data Visualization & statistics](#data-visualization)
+8. [Extracting real-time PM2.5 values](#extracting-the-latest-pm2.5)
+9. [Summary](#summary)
 ## Requirements: 
 1. Python 2.7+
 2. Pandas
@@ -18,7 +19,7 @@ You can install the package directly via pypi through pip:
 ```
 >>> pip install py-openaq
 ```
-### OpenAQ API data model: 
+## OpenAQ API data model: 
 The API is working with 8 different entities including:
 * cities: provides a simple listing of cities within the platforms
 * countries: provides a simple listing of countries within the platform
@@ -29,7 +30,8 @@ The API is working with 8 different entities including:
 * parameters: provides a simple listing of parameters within the platform
 * sources: provides a list of data sources
 
-### In the time of creating this Git repository I just installed the following versions of required python libraries: 
+## Version of python libraries
+In the time of creating this Git repository I just installed the following versions of required python libraries: 
 pandas: 0.24.2 </br>
 requests: 2.22.0 </br>
 py-openaq: 1.1.0 </br>
@@ -92,7 +94,7 @@ print("Statu: " + str(status)  + "\n" + "JSON: " + str(resp))
  ]
 }
 ```
-### Damping JSON responses into a DataFrame:
+## Damping JSON responses into a DataFrame:
 We want to work with JSON objects and Pandas provides a great chance to easily damp JSON object into a DataFrame. 
 ```Python
 from pandas.io.json import json_normalize
@@ -219,7 +221,7 @@ res = api.measurements(city='ALBERTA', location='Calgary Central2', parameter='p
 
 print(res.head(100))
 ```
-### Data Visualization 
+## Data Visualization 
 After damping the data into a DataFrame we can do some data visualization and data summarization to get a general view or maybe do some comparision between different locations. Here in this tutorial I want to show, summarize, and compare the value of PM2.5 between all the stations in the Alberta, Canada. 
 #### * First step: Extracting 10,000 measurements of PM2.5 from the desired stations and calculate statistics about the extracted data
 

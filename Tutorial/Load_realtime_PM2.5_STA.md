@@ -50,7 +50,7 @@ With The JSON body like:
 ```
 So we are in need of extracting a list of metadata from OpenAQ including and the mapping would be as follow: 
 ### To create a Thing:
-* (Mandatory) name: String // location: "Calgary Central2", OpenAQ API: api.locations(city='ALBERTA', df=True).iloc[3] 
+* (Mandatory) name: String // "Calgary Central2", OpenAQ API: api.locations(city='ALBERTA', df=True).iloc[3] 
 * (Mandatory) description: String // "Air quality monitoring station"  
 * (Optional) Deployment Condition: String // "Cathedral Energy DT, On the roof" 
 * (Optional) Case Used: String // "To monitor No2, O3, PM2.5, and CO."</br> 
@@ -59,29 +59,35 @@ So we are in need of extracting a list of metadata from OpenAQ including and the
 * (Mandatory) description: String // "623 6 Avenue Southwest, Calgary, Division 6, AB T2P0T5, Downtown Calgary, Calgary Calgary Alberta Canada" 
 * (Mandatory) encodingType: ValueCode // "application/vnd.geo+json"
 * (Mandatory) location: Any (Depends on encodingType) // "coordinates": [-114.075,51.0476],"type": "Point"</br> OpenAQ API: api.locations(city='ALBERTA', df=True).iloc[3] 
-### To create Datastreams: 
-* (Mandatory) name:	String
-* (Mandatory) description	:	String
-* (Mandatory) unitOfMeasurement:	JSON Object
-* (Mandatory) observationType:	ValueCode
-* (Optional) observedArea: GeoJSON Polygon Object
-* (Optional) phenomenonTime: Time Interval (ISO 8601)
-* (Optional) resultTime: Time Interval (ISO 8601)</br>
+### To create Datastreams:  
+* (Mandatory) name:	String // "PM2.5"
+* (Mandatory) description	:	String // "Roof pm2.5"
+* (Mandatory) unitOfMeasurement:	JSON Object // 
+```HTML
+"symbol": "ug/m3",
+"name": "microgram per cubic meter",
+"definition": "https://www.airnow.gov/index.cfm?action=aqibasics.particle"
+```
+* (Mandatory) observationType:	ValueCode // "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+* (Optional) observedArea: GeoJSON Polygon Object // ""
+* (Optional) phenomenonTime: Time Interval (ISO 8601) // ""
+* (Optional) resultTime: Time Interval (ISO 8601)// ""</br>
 ### To create ObservedProperty: 
-* (Mandatory) name: String
-* (Mandatory) definition:	URI
-* (Mandatory) description: String </br> 
+* (Mandatory) name: String // "pm2.5"
+* (Mandatory) definition:	URI // "https://en.wikipedia.org/wiki/Particulates"
+* (Mandatory) description: String // "PM2.5 Particulates"</br> 
 ### To create Sensor: 
-* (Mandatory) name:	String
-* (Mandatory) description:	String
-* (Mandatory) encodingType:	ValueCode
-* (Mandatory) metadata: Any (depending on the value of the encodingType)</br>
+* (Mandatory) name:	String // "Central2_PM2.5 sensor" 
+* (Mandatory) description:	String // "This sensor is deployed by Environment Canada - Air Quality Services"
+* (Mandatory) encodingType:	ValueCode // "text/html" 
+* (Mandatory) metadata: Any (depending on the value of the encodingType) // "https://en.wikipedia.org/wiki/Particulates"</br>
 ### To create Observations: 
-* (Mandatory) phenomenonTime:	Time(Interval) String (ISO 8601)
-* (Mandatory) result: Any (depends on the observationType defined in the associated Datastream)
-* (Mandatory) resultTime:	Time(Interval) String (ISO 8601)
-* (Optional) resultQuality: DQ_Element
-* (Optional) validTime:	Time Interval String (ISO 8601)
-* (Optional) parameters: JSON Object
+* (Mandatory) phenomenonTime:	Time(Interval) String (ISO 8601) // OpenAQ API: "api.latest(city='ALBERTA', location='Calgary Central2', parameter='pm25', df=True)" 
+* (Mandatory) result: Any (depends on the observationType defined in the associated Datastream) // OpenAQ API: "api.latest(city='ALBERTA', location='Calgary Central2', parameter='pm25', df=True)" 
+* (Mandatory) resultTime:	Time(Interval) String (ISO 8601) // OpenAQ API: "api.latest(city='ALBERTA', location='Calgary Central2', parameter='pm25', df=True)"
+* Datastream id: extracted from the response of first query of STA
+* (Optional) resultQuality: DQ_Element // ""
+* (Optional) validTime:	Time Interval String (ISO 8601) // ""
+* (Optional) parameters: JSON Object // ""
 
 

@@ -1,1 +1,87 @@
 # In this tutorial we will show how the realtime PM2.5 values extracted from OpenAQ can be load into OGC SensorThings API. 
+## Table of Contents
+1. [OGC SensorThings API Data Model](#ogc-sensorthings-api-data-model)
+
+## OGC SensorThings API Data Model:
+In this section we want to briefly review the data model of OGC SensorThings API. For detailed information you can refer to OGC SensorThings API [Documentation](https://developers.sensorup.com/docs/#introduction). Totally we have 8 entities in STA data model including: Thing, Sensor, Datastream, ObservedProperty, FeatureOfInterest, Observation, Location, and HistoricalLocation. For creating a Thing in STA, we have to post such a HTML POST query to the server: 
+```HTML
+http:// http://scratchpad.sensorup.com/OGCSensorThings/v1.0/Things 
+```
+With The JSON body like: 
+```HTML
+{
+  "name": "Temperature Monitoring System",
+  "description": "Sensor system monitoring area temperature",
+  "properties": {
+    "Deployment Condition": "Deployed in a third floor balcony",
+    "Case Used": "Radiation shield"
+  },
+  "Locations": [{
+    "name": "UofC CCIT",
+    "description": "University of Calgary, CCIT building",
+    "encodingType": "application/vnd.geo+json",
+    "location": {
+      "type": "Point",
+      "coordinates": [-114.133, 51.08]
+    }
+  }],
+  "Datastreams": [{
+    "name": "Air Temperature DS",
+    "description": "Datastream for recording temperature",
+    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+    "unitOfMeasurement": {
+      "name": "Degree Celsius",
+      "symbol": "degC",
+      "definition": "http://www.qudt.org/qudt/owl/1.0.0/unit/Instances.html#DegreeCelsius"
+    },
+    "ObservedProperty": {
+      "name": "Area Temperature",
+      "description": "The degree or intensity of heat present in the area",
+      "definition": "http://www.qudt.org/qudt/owl/1.0.0/quantity/Instances.html#AreaTemperature"
+    },
+    "Sensor": {
+      "name": "DHT22",
+      "description": "DHT22 temperature sensor",
+      "encodingType": "application/pdf",
+      "metadata": "https://cdn-shop.adafruit.com/datasheets/DHT22.pdf"
+    }
+  }]
+}
+```
+So we are in need of extracting a list of metadata from OpenAQ including: 
+### To create a Thing:
+* (Mandatory) name: String
+* (Mandatory) description: String 
+* (Optional) Deployment Condition: String 
+* (Optional) Case Used: String </br>
+### To create a Locations:
+* (Mandatory) name: String
+* (Mandatory) description: String 
+* (Mandatory) encodingType: ValueCode
+* (Mandatory) location: Any (Depends on encodingType)</br>
+### To create Datastreams: 
+* (Mandatory) name:	String
+* (Mandatory) description	:	String
+* (Mandatory) unitOfMeasurement:	JSON Object
+* (Mandatory) observationType:	ValueCode
+* (Optional) observedArea: GeoJSON Polygon Object
+* (Optional) phenomenonTime: Time Interval (ISO 8601)
+* (Optional) resultTime: Time Interval (ISO 8601)</br>
+### To create ObservedProperty: 
+* (Mandatory) name: String
+* (Mandatory) definition:	URI
+* (Mandatory) description: String </br> 
+### To create Sensor: 
+* (Mandatory) name:	String
+* (Mandatory) description:	String
+* (Mandatory) encodingType:	ValueCode
+* (Mandatory) metadata: Any (depending on the value of the encodingType)</br>
+### To create Observations: 
+* (Mandatory) phenomenonTime:	Time(Interval) String (ISO 8601)
+* (Mandatory) result: Any (depends on the observationType defined in the associated Datastream)
+* (Mandatory) resultTime:	Time(Interval) String (ISO 8601)
+* (Optional) resultQuality: DQ_Element
+* (Optional) validTime:	Time Interval String (ISO 8601)
+* (Optional) parameters: JSON Object
+
+

@@ -1,6 +1,7 @@
 # In this tutorial we will show how the realtime PM2.5 values extracted from OpenAQ can be load into OGC SensorThings API. 
 ## Table of Contents
 1. [OGC SensorThings API Data Model](#ogc-sensorthings-api-data-model)
+2. [Mapping between OGC SensorThings API and OpenAQ API](#mapping-between-ogc-sensorthings-api-and-openaq-api)
 
 ## OGC SensorThings API Data Model:
 In this section we want to briefly review the data model of OGC SensorThings API. For detailed information you can refer to OGC SensorThings API [Documentation](https://developers.sensorup.com/docs/#introduction). Totally we have 8 entities in STA data model including: Thing, Sensor, Datastream, ObservedProperty, FeatureOfInterest, Observation, Location, and HistoricalLocation. For creating a Thing in STA, we have to post such a HTML POST query to the server: 
@@ -48,6 +49,7 @@ With The JSON body like:
   }]
 }
 ```
+## Mapping between OGC SensorThings API and OpenAQ API
 So we are in need of extracting a list of metadata from OpenAQ including and the mapping would be as follow: 
 ### To create a Thing:
 * (Mandatory) name: String // "Calgary Central2", OpenAQ API: api.locations(city='ALBERTA', df=True).iloc[3] 

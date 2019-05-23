@@ -295,18 +295,4 @@ s.run()
 ```
 Result: </br>
 ![alt text](https://github.com/soroushojagh6633/ETL-Learning/blob/master/img/Real-time_OpenAQ.PNG "Getting the last PM2.5 every five minutes")
-```Python
 
-```
-
-```Python
-
-```
-
-```Python
-
-```
-
-```Python
-
-```

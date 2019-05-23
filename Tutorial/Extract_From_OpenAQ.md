@@ -5,7 +5,7 @@
 3. [OpenAQ Data Model](#openaq-api-data-model)
 4. [Version of python libraries](#version-of-python-libraries)
 5. [Hello World](#first-code-in-python)
-6. [Damping JSON Objects into a DataFrames](#damping-json-responses-into-a-dataframe)
+6. [Convering JSON Objects into a DataFrames](#convering-json-responses-into-a-dataframe)
 7. [Data Visualization & statistics](#data-visualization)
 8. [Extracting real-time PM2.5 values](#extracting-the-latest-pm2.5)
 9. [Summary](#summary)
@@ -207,7 +207,7 @@ Results in JSON format is as follows:
   ]
 })
 ```
-It can be simply damp into a DataFrame by using: 
+It can be simply convert into a DataFrame by using: 
 ```Python
 # Getting the latest value of PM2.5 for the central station located in Calgary
 res = api.latest(city='ALBERTA', location='Calgary Central2', parameter='pm25', df=True)
@@ -222,7 +222,7 @@ res = api.measurements(city='ALBERTA', location='Calgary Central2', parameter='p
 print(res.head(100))
 ```
 ## Data Visualization 
-After damping the data into a DataFrame we can do some data visualization and data summarization to get a general view or maybe do some comparision between different locations. Here in this tutorial I want to show, summarize, and compare the value of PM2.5 between all the stations in the Alberta, Canada. 
+After converting the data into a DataFrame we can do some data visualization and data summarization to get a general view or maybe do some comparision between different locations. Here in this tutorial I want to show, summarize, and compare the value of PM2.5 between all the stations in the Alberta, Canada. 
 #### * First step: Extracting 10,000 measurements of PM2.5 from the desired stations and calculate statistics about the extracted data
 
 ```Python

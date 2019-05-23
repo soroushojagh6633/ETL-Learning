@@ -53,7 +53,7 @@ print("Statu: " + str(status)  + "\n" + "JSON: " + str(resp))
 {
   'meta': {
     'name': 'openaq-api',
-    'license': 'CC BY 4.0',
+    'license': 'CC BY 4.0', 
     'website': 'https://docs.openaq.org/',
     'page': 1,
     'limit': 100,

@@ -50,6 +50,23 @@ With The JSON body like:
   }]
 }
 ```
+And a header as follow: 
+```Python
+header = {'Content-Type': "application/json"}
+```
+Loading observation is also require sending a request to the ST server wrapped with a JSON object and the same header as follow: 
+```HTML
+http:// http://scratchpad.sensorup.com/OGCSensorThings/v1.0/Observations 
+```
+JSON body is as follow:
+```HTML
+{
+  "phenomenonTime": "2017-02-07T18:02:00.000Z",
+  "resultTime" : "2017-02-07T18:02:05.000Z",
+  "result" : 21.6,
+  "Datastream":{"@iot.id":8}
+}
+
 ## Mapping between OGC SensorThings API and OpenAQ API
 So we are in need of extracting a list of metadata from OpenAQ including and the mapping would be as follow: 
 ### To create a Thing:
@@ -92,5 +109,5 @@ So we are in need of extracting a list of metadata from OpenAQ including and the
 * (Optional) resultQuality: DQ_Element // ""
 * (Optional) validTime:	Time Interval String (ISO 8601) // ""
 * (Optional) parameters: JSON Object // "" </br>?
-## Creating Things, Location, Datastream, ObservedProperty, and Sensor entities
+
 

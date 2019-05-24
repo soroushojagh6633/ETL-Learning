@@ -66,7 +66,7 @@ JSON body is as follow:
   "result" : 21.6,
   "Datastream":{"@iot.id":8}
 }
-
+```
 ## Mapping between OGC SensorThings API and OpenAQ API
 So we are in need of extracting a list of metadata from OpenAQ including and the mapping would be as follow: 
 ### To create a Thing:

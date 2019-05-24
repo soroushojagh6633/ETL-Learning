@@ -1,4 +1,4 @@
-# In this tutorial we will show how the realtime PM2.5 values extracted from OpenAQ can be load into OGC SensorThings API. 
+# In this tutorial we will show how the realtime PM2.5 values extracted from OpenAQ can be mapped into OGC SensorThings API. 
 ## Table of Contents
 1. [OGC SensorThings API Data Model](#ogc-sensorthings-api-data-model)
 2. [Mapping between OGC SensorThings API and OpenAQ API](#mapping-between-ogc-sensorthings-api-and-openaq-api)

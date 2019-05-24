@@ -2,7 +2,7 @@
 ## Table of Contents
 1. [OGC SensorThings API Data Model](#ogc-sensorthings-api-data-model)
 2. [Mapping between OGC SensorThings API and OpenAQ API](#mapping-between-ogc-sensorthings-api-and-openaq-api)
-3. [Creating Things, Location, Datastream, ObservedProperty, and Sensor entities](#creating-things,-location,-datastream,-observedProperty,-and-sensor-entities)
+
 
 ## OGC SensorThings API Data Model:
 In this section we want to briefly review the data model of OGC SensorThings API. For detailed information you can refer to OGC SensorThings API [Documentation](https://developers.sensorup.com/docs/#introduction). Totally we have 8 entities in STA data model including: Thing, Sensor, Datastream, ObservedProperty, FeatureOfInterest, Observation, Location, and HistoricalLocation. For creating a Thing in STA, we have to post such a HTML POST query to the server: 

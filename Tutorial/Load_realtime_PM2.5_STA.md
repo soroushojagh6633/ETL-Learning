@@ -2,6 +2,7 @@
 ## Table of Contents
 1. [OGC SensorThings API Data Model](#ogc-sensorthings-api-data-model)
 2. [Mapping between OGC SensorThings API and OpenAQ API](#mapping-between-ogc-sensorthings-api-and-openaq-api)
+3. [Creating Things, Location, Datastream, ObservedProperty, and Sensor entities](#creating-things-location-datastream,-observedProperty,-and-sensor-entities)
 
 ## OGC SensorThings API Data Model:
 In this section we want to briefly review the data model of OGC SensorThings API. For detailed information you can refer to OGC SensorThings API [Documentation](https://developers.sensorup.com/docs/#introduction). Totally we have 8 entities in STA data model including: Thing, Sensor, Datastream, ObservedProperty, FeatureOfInterest, Observation, Location, and HistoricalLocation. For creating a Thing in STA, we have to post such a HTML POST query to the server: 
@@ -81,7 +82,7 @@ So we are in need of extracting a list of metadata from OpenAQ including and the
 ### To create Sensor: 
 * (Mandatory) name:	String // "Central2_PM2.5 sensor" 
 * (Mandatory) description:	String // "This sensor is deployed by Environment Canada - Air Quality Services"
-* (Mandatory) encodingType:	ValueCode // "text/html" 
+* (Mandatory) encodingType:	ValueCode // "application/pdf" 
 * (Mandatory) metadata: Any (depending on the value of the encodingType) // "https://en.wikipedia.org/wiki/Particulates"</br>
 ### To create Observations: 
 * (Mandatory) phenomenonTime:	Time(Interval) String (ISO 8601) // OpenAQ API: "api.latest(city='ALBERTA', location='Calgary Central2', parameter='pm25', df=True)" 
@@ -90,6 +91,6 @@ So we are in need of extracting a list of metadata from OpenAQ including and the
 * Datastream id: extracted from the response of first query of STA
 * (Optional) resultQuality: DQ_Element // ""
 * (Optional) validTime:	Time Interval String (ISO 8601) // ""
-* (Optional) parameters: JSON Object // ""
-
+* (Optional) parameters: JSON Object // "" </br>?
+## Creating Things, Location, Datastream, ObservedProperty, and Sensor entities
 

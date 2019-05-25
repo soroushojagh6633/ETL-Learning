@@ -1,4 +1,4 @@
-```HTML
+```JSON
 {
   "name": "Temperature Monitoring System",
   "description": "Sensor system monitoring area temperature",
